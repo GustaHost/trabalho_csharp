@@ -4,14 +4,16 @@
     "Titulo": "Lavar carro",
     "Usuario": "Leticia",
     "Status": false,
+    "Preco": 25.00,  
     "CriadoEm": "2025-05-30T08:00:15.3456789-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 8,
-    "Titulo": "Fazer exerc\u00EDcios",
+    "Titulo": "Fazer exercícios",
     "Usuario": "Kelvin",
     "Status": true,
+    "Preco": 10.00,  
     "CriadoEm": "2025-05-28T07:20:30.4050607-03:00",
     "ConcluidoEm": null
   },
@@ -20,6 +22,7 @@
     "Titulo": "Responder e-mails",
     "Usuario": "Maria",
     "Status": true,
+    "Preco": 5.00,   
     "CriadoEm": "2025-05-29T09:12:03-03:00",
     "ConcluidoEm": "2025-05-29T10:05:18.2345678-03:00"
   },
@@ -28,6 +31,7 @@
     "Titulo": "Organizar arquivos",
     "Usuario": "Gustavo",
     "Status": false,
+    "Preco": 30.75,  
     "CriadoEm": "2025-05-26T13:40:55.6789012-03:00",
     "ConcluidoEm": null
   },
@@ -35,7 +39,8 @@
     "Id": 11,
     "Titulo": "Planejar viagem",
     "Usuario": "Leticia",
-    "Status": false,
+    "Status": true,
+    "Preco": 150.00, 
     "CriadoEm": "2025-05-27T17:08:22.3344556-03:00",
     "ConcluidoEm": null
   },
@@ -44,6 +49,7 @@
     "Titulo": "Consertar torneira",
     "Usuario": "Kelvin",
     "Status": true,
+    "Preco": 75.20,  
     "CriadoEm": "2025-05-25T15:15:15-03:00",
     "ConcluidoEm": "2025-05-25T17:00:00.1234567-03:00"
   },
@@ -52,6 +58,7 @@
     "Titulo": "Ligar para cliente",
     "Usuario": "Maria",
     "Status": false,
+    "Preco": 12.00,  
     "CriadoEm": "2025-05-30T10:25:40.7890123-03:00",
     "ConcluidoEm": null
   },
@@ -60,6 +67,7 @@
     "Titulo": "Ler livro",
     "Usuario": "Gustavo",
     "Status": false,
+    "Preco": 8.50,   
     "CriadoEm": "2025-05-28T20:07:07.8901234-03:00",
     "ConcluidoEm": null
   },
@@ -68,6 +76,7 @@
     "Titulo": "Comprar presente",
     "Usuario": "Leticia",
     "Status": true,
+    "Preco": 60.00,  
     "CriadoEm": "2025-05-29T14:50:00-03:00",
     "ConcluidoEm": "2025-05-29T16:10:30.9876543-03:00"
   },
@@ -76,6 +85,7 @@
     "Titulo": "Limpar a casa",
     "Usuario": "Kelvin",
     "Status": false,
+    "Preco": 40.00,  
     "CriadoEm": "2025-05-27T09:30:10.1122334-03:00",
     "ConcluidoEm": null
   },
@@ -84,6 +94,7 @@
     "Titulo": "Escrever artigo",
     "Usuario": "Maria",
     "Status": false,
+    "Preco": 90.00,  
     "CriadoEm": "2025-05-26T14:05:00.5566778-03:00",
     "ConcluidoEm": null
   },
@@ -92,14 +103,16 @@
     "Titulo": "Fazer compras online",
     "Usuario": "Gustavo",
     "Status": true,
+    "Preco": 20.00,  
     "CriadoEm": "2025-05-25T10:00:00-03:00",
     "ConcluidoEm": "2025-05-25T11:00:00.1234567-03:00"
   },
   {
     "Id": 19,
-    "Titulo": "Assistir s\u00E9rie",
+    "Titulo": "Assistir série",
     "Usuario": "Leticia",
     "Status": false,
+    "Preco": 0.00, 
     "CriadoEm": "2025-05-31T21:30:45-03:00",
     "ConcluidoEm": null
   },
@@ -108,6 +121,7 @@
     "Titulo": "Cortar cabelo",
     "Usuario": "Kelvin",
     "Status": false,
+    "Preco": 35.00,  
     "CriadoEm": "2025-05-29T12:00:00.9988776-03:00",
     "ConcluidoEm": null
   },
@@ -116,6 +130,7 @@
     "Titulo": "Fazer planilha",
     "Usuario": "Maria",
     "Status": false,
+    "Preco": 45.00,  
     "CriadoEm": "2025-05-28T13:13:13.1313131-03:00",
     "ConcluidoEm": null
   },
@@ -124,6 +139,7 @@
     "Titulo": "Ajudar com projeto",
     "Usuario": "Gustavo",
     "Status": true,
+    "Preco": 120.00, 
     "CriadoEm": "2025-05-27T10:20:00-03:00",
     "ConcluidoEm": "2025-05-27T16:00:30.456789-03:00"
   },
@@ -132,6 +148,7 @@
     "Titulo": "Ir ao banco",
     "Usuario": "Leticia",
     "Status": false,
+    "Preco": 0.00,   
     "CriadoEm": "2025-05-30T09:10:20.3040506-03:00",
     "ConcluidoEm": null
   },
@@ -140,14 +157,16 @@
     "Titulo": "Caminhar com o cachorro",
     "Usuario": "Kelvin",
     "Status": false,
+    "Preco": 0.00,   
     "CriadoEm": "2025-05-26T08:00:00-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 25,
-    "Titulo": "Criar apresenta\u00E7\u00E3o",
+    "Titulo": "Criar apresentação",
     "Usuario": "Maria",
     "Status": true,
+    "Preco": 70.00,  
     "CriadoEm": "2025-05-25T16:40:10.7890123-03:00",
     "ConcluidoEm": null
   },
@@ -156,6 +175,7 @@
     "Titulo": "Pesquisar tema",
     "Usuario": "Gustavo",
     "Status": true,
+    "Preco": 18.00,  
     "CriadoEm": "2025-05-24T13:00:00-03:00",
     "ConcluidoEm": "2025-05-24T17:00:00.9988776-03:00"
   },
@@ -164,6 +184,7 @@
     "Titulo": "Visitar amigos",
     "Usuario": "Leticia",
     "Status": true,
+    "Preco": 0.00,   
     "CriadoEm": "2025-05-31T15:00:00.1234567-03:00",
     "ConcluidoEm": null
   },
@@ -172,6 +193,7 @@
     "Titulo": "Atualizar software",
     "Usuario": "Kelvin",
     "Status": true,
+    "Preco": 50.00,  
     "CriadoEm": "2025-05-28T10:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -180,6 +202,7 @@
     "Titulo": "Reunir com equipe",
     "Usuario": "Maria",
     "Status": true,
+    "Preco": 25.00,  
     "CriadoEm": "2025-05-29T11:00:00-03:00",
     "ConcluidoEm": "2025-05-29T12:00:00.1234567-03:00"
   },
@@ -188,6 +211,7 @@
     "Titulo": "Fazer backup",
     "Usuario": "Gustavo",
     "Status": false,
+    "Preco": 10.00,  
     "CriadoEm": "2025-05-27T18:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -196,14 +220,16 @@
     "Titulo": "Comprar flores",
     "Usuario": "Leticia",
     "Status": false,
+    "Preco": 45.00,  
     "CriadoEm": "2025-05-30T11:30:00-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 32,
-    "Titulo": "Revisar c\u00F3digo",
+    "Titulo": "Revisar código",
     "Usuario": "Kelvin",
     "Status": true,
+    "Preco": 80.00,  
     "CriadoEm": "2025-05-25T19:00:00-03:00",
     "ConcluidoEm": "2025-05-25T21:00:00-03:00"
   },
@@ -212,6 +238,7 @@
     "Titulo": "Enviar proposta",
     "Usuario": "Maria",
     "Status": false,
+    "Preco": 110.00, 
     "CriadoEm": "2025-05-26T10:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -220,6 +247,7 @@
     "Titulo": "Academia",
     "Usuario": "Gustavo",
     "Status": false,
+    "Preco": 60.00,  
     "CriadoEm": "2025-05-28T06:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -228,6 +256,7 @@
     "Titulo": "Pintar quadro",
     "Usuario": "Leticia",
     "Status": true,
+    "Preco": 120.00, 
     "CriadoEm": "2025-05-29T10:00:00-03:00",
     "ConcluidoEm": "2025-05-29T13:00:00-03:00"
   },
@@ -236,6 +265,7 @@
     "Titulo": "Arrumar jardim",
     "Usuario": "Kelvin",
     "Status": false,
+    "Preco": 70.00,  
     "CriadoEm": "2025-05-27T14:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -244,6 +274,7 @@
     "Titulo": "Fazer curso online",
     "Usuario": "Maria",
     "Status": false,
+    "Preco": 200.00, 
     "CriadoEm": "2025-05-30T14:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -252,6 +283,7 @@
     "Titulo": "Reparar computador",
     "Usuario": "Gustavo",
     "Status": true,
+    "Preco": 95.00,  
     "CriadoEm": "2025-05-25T09:00:00-03:00",
     "ConcluidoEm": "2025-05-25T12:00:00-03:00"
   },
@@ -260,6 +292,7 @@
     "Titulo": "Assistir filme",
     "Usuario": "Leticia",
     "Status": false,
+    "Preco": 0.00,   
     "CriadoEm": "2025-05-31T19:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -268,6 +301,7 @@
     "Titulo": "Cozinhar jantar",
     "Usuario": "Kelvin",
     "Status": false,
+    "Preco": 30.00,  
     "CriadoEm": "2025-05-29T18:00:00-03:00",
     "ConcluidoEm": null
   }
