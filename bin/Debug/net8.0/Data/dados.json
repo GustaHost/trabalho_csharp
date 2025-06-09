@@ -1,34 +1,33 @@
-
 [
   {
     "Id": 1,
     "Titulo": "Planejar o dia",
     "Usuario": "Carlos",
-    "Status": true,
+    "Status": false,
     "Preco": 0.00,
     "Prioridade": "Alta",
-    "CriadoEm": "2025-06-09T08:00:00.0000000-03:00",
-    "ConcluidoEm": "2025-06-09T08:30:00.0000000-03:00"
+    "CriadoEm": "2025-06-09T08:00:00-03:00",
+    "ConcluidoEm": null
   },
   {
     "Id": 2,
-    "Titulo": "Fazer café da manhã",
+    "Titulo": "Fazer caf\u00E9 da manh\u00E3",
     "Usuario": "Ana",
-    "Status": true,
+    "Status": false,
     "Preco": 15.00,
     "Prioridade": "Media",
-    "CriadoEm": "2025-06-09T07:45:00.0000000-03:00",
-    "ConcluidoEm": "2025-06-09T08:15:00.0000000-03:00"
+    "CriadoEm": "2025-06-09T07:45:00-03:00",
+    "ConcluidoEm": null
   },
   {
     "Id": 3,
     "Titulo": "Verificar e-mails de trabalho",
     "Usuario": "Pedro",
-    "Status": true,
+    "Status": false,
     "Preco": 0.00,
     "Prioridade": "Baixa",
-    "CriadoEm": "2025-06-09T09:00:00.0000000-03:00",
-    "ConcluidoEm": "2025-06-09T09:45:00.0000000-03:00"
+    "CriadoEm": "2025-06-09T09:00:00-03:00",
+    "ConcluidoEm": null
   },
   {
     "Id": 4,
@@ -37,44 +36,44 @@
     "Status": false,
     "Preco": 0.00,
     "Prioridade": "Media",
-    "CriadoEm": "2025-06-09T10:00:00.0000000-03:00",
+    "CriadoEm": "2025-06-09T10:00:00-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 5,
-    "Titulo": "Preparar almoço",
+    "Titulo": "Preparar almo\u00E7o",
     "Usuario": "Mariana",
-    "Status": true,
+    "Status": false,
     "Preco": 35.00,
     "Prioridade": "Alta",
-    "CriadoEm": "2025-06-09T12:00:00.0000000-03:00",
-    "ConcluidoEm": "2025-06-09T13:00:00.0000000-03:00"
+    "CriadoEm": "2025-06-09T12:00:00-03:00",
+    "ConcluidoEm": null
   },
   {
     "Id": 6,
-    "Titulo": "Fazer ligação importante",
-    "Usuario": "João",
+    "Titulo": "Fazer liga\u00E7\u00E3o importante",
+    "Usuario": "Jo\u00E3o",
     "Status": false,
     "Preco": 0.00,
     "Prioridade": "Alta",
-    "CriadoEm": "2025-06-09T14:00:00.0000000-03:00",
+    "CriadoEm": "2025-06-09T14:00:00-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 7,
     "Titulo": "Lavar carro",
     "Usuario": "Leticia",
-    "Status": true,
+    "Status": false,
     "Preco": 25.00,
     "Prioridade": "Baixa",
     "CriadoEm": "2025-05-30T08:00:15.3456789-03:00",
-    "ConcluidoEm": "2025-06-09T14:53:33.249478-03:00"
+    "ConcluidoEm": null
   },
   {
     "Id": 8,
     "Titulo": "Fazer exercicios",
     "Usuario": "Kelvin",
-    "Status": true,
+    "Status": false,
     "Preco": 10.00,
     "Prioridade": "Alta",
     "CriadoEm": "2025-05-28T07:20:30.4050607-03:00",
@@ -84,17 +83,17 @@
     "Id": 9,
     "Titulo": "Responder e-mails",
     "Usuario": "Maria",
-    "Status": true,
+    "Status": false,
     "Preco": 5.00,
     "Prioridade": "Media",
     "CriadoEm": "2025-05-29T09:12:03-03:00",
-    "ConcluidoEm": "2025-05-29T10:05:18.2345678-03:00"
+    "ConcluidoEm": null
   },
   {
     "Id": 10,
     "Titulo": "Organizar arquivos",
     "Usuario": "Gustavo",
-    "Status": true,
+    "Status": false,
     "Preco": 30.75,
     "Prioridade": "Baixa",
     "CriadoEm": "2025-05-26T13:40:55.6789012-03:00",
@@ -108,7 +107,7 @@
     "Preco": 150.00,
     "Prioridade": "Alta",
     "CriadoEm": "2025-05-27T17:08:22.3344556-03:00",
-    "ConcluidoEm": null
+    "ConcluidoEm": "2025-06-09T15:04:42.8999236-03:00"
   },
   {
     "Id": 12,
@@ -154,17 +153,17 @@
     "Id": 16,
     "Titulo": "Limpar a casa",
     "Usuario": "Kelvin",
-    "Status": false,
+    "Status": true,
     "Preco": 40.00,
     "Prioridade": "Baixa",
     "CriadoEm": "2025-05-27T09:30:10.1122334-03:00",
-    "ConcluidoEm": null
+    "ConcluidoEm": "2025-06-09T15:04:29.0692637-03:00"
   },
   {
     "Id": 17,
     "Titulo": "Escrever artigo",
     "Usuario": "Maria",
-    "Status": true,
+    "Status": false,
     "Preco": 90.00,
     "Prioridade": "Alta",
     "CriadoEm": "2025-05-26T14:05:00.5566778-03:00",
@@ -182,7 +181,7 @@
   },
   {
     "Id": 19,
-    "Titulo": "Assistir série",
+    "Titulo": "Assistir s\u00E9rie",
     "Usuario": "Leticia",
     "Status": true,
     "Preco": 0.00,
@@ -234,15 +233,15 @@
     "Id": 24,
     "Titulo": "Caminhar com o cachorro",
     "Usuario": "Kelvin",
-    "Status": false,
+    "Status": true,
     "Preco": 0.00,
     "Prioridade": "Baixa",
     "CriadoEm": "2025-05-26T08:00:00-03:00",
-    "ConcluidoEm": null
+    "ConcluidoEm": "2025-06-09T15:02:54.422085-03:00"
   },
   {
     "Id": 25,
-    "Titulo": "Criar apresentação",
+    "Titulo": "Criar apresenta\u00E7\u00E3o",
     "Usuario": "Maria",
     "Status": false,
     "Preco": 70.00,
@@ -312,13 +311,13 @@
   },
   {
     "Id": 32,
-    "Titulo": "Revisar código",
+    "Titulo": "Revisar c\u00F3digo",
     "Usuario": "Kelvin",
-    "Status": true,
+    "Status": false,
     "Preco": 80.00,
     "Prioridade": "Alta",
     "CriadoEm": "2025-05-25T19:00:00-03:00",
-    "ConcluidoEm": "2025-05-25T21:00:00-03:00"
+    "ConcluidoEm": null
   },
   {
     "Id": 33,
@@ -344,17 +343,17 @@
     "Id": 35,
     "Titulo": "Pintar quadro",
     "Usuario": "Leticia",
-    "Status": true,
+    "Status": false,
     "Preco": 120.00,
     "Prioridade": "Baixa",
     "CriadoEm": "2025-05-29T10:00:00-03:00",
-    "ConcluidoEm": "2025-05-29T13:00:00-03:00"
+    "ConcluidoEm": null
   },
   {
     "Id": 36,
     "Titulo": "Arrumar jardim",
     "Usuario": "Kelvin",
-    "Status": true,
+    "Status": false,
     "Preco": 70.00,
     "Prioridade": "Media",
     "CriadoEm": "2025-05-27T14:00:00-03:00",
@@ -384,7 +383,7 @@
     "Id": 39,
     "Titulo": "Assistir filme",
     "Usuario": "Leticia",
-    "Status": true,
+    "Status": false,
     "Preco": 0.00,
     "Prioridade": "Baixa",
     "CriadoEm": "2025-05-31T19:00:00-03:00",
@@ -398,16 +397,6 @@
     "Preco": 30.00,
     "Prioridade": "Media",
     "CriadoEm": "2025-05-29T18:00:00-03:00",
-    "ConcluidoEm": null
-  },
-  {
-    "Id": 41,
-    "Titulo": "eu n sei",
-    "Usuario": "AAAAAAAAAAAAAAAA",
-    "Status": false,
-    "Preco": 0.1,
-    "Prioridade": "Alta",
-    "CriadoEm": "2025-06-09T14:53:49.6597437-03:00",
     "ConcluidoEm": null
   }
 ]

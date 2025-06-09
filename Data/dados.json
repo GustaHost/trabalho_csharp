@@ -3,11 +3,11 @@
     "Id": 1,
     "Titulo": "Planejar o dia",
     "Usuario": "Carlos",
-    "Status": false,
+    "Status": true,
     "Preco": 0.00,
     "Prioridade": "Alta",
     "CriadoEm": "2025-06-09T08:00:00-03:00",
-    "ConcluidoEm": null
+    "ConcluidoEm": "2025-06-09T15:17:23.3625088-03:00"
   },
   {
     "Id": 2,

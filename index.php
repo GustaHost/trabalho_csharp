@@ -116,67 +116,31 @@ if (!is_array($tarefas)) {
     echo "<div class='alert alert-danger'>Não foi possível carregar as tarefas da API. Verifique se a API está rodando em http://localhost:5093.</div>";
 }
 
-// --- CÁLCULOS PARA TOTAIS NO RODAPÉ ---
-$precoTotalGeral = 0;
-$tempoTotalConcluidoSegundos = 0;
-
 // Array de prioridades válidas para checagem e exibição
-// ATENÇÃO: Ajuste aqui para "Media" (sem acento) para corresponder ao C#
 $prioridadesValidas = ['Alta', 'Media', 'Baixa'];
 
-// Nova variável: Para contar as prioridades
-$contagemPrioridades = [
-    'Alta' => 0,
-    'Media' => 0, // <-- Ajuste aqui
-    'Baixa' => 0,
-    'Desconhecida' => 0 // Adicionado para prioridades não reconhecidas
-];
-
-// Percorre as tarefas para calcular totais e adicionar prioridade para exibição
+// Percorre as tarefas para adicionar prioridade e tempo gasto para exibição no HTML
 foreach ($tarefas as &$tarefa) { // Use & para modificar o array original
-    // Use isset() e o camelCase para acessar as chaves do JSON retornado pela API
-    $precoTotalGeral += isset($tarefa['preco']) ? (float)$tarefa['preco'] : 0.00; // <-- AGORA camelCase "preco"
-
-    $isConcluido = isset($tarefa['status']) ? (bool)$tarefa['status'] : false; // <-- AGORA camelCase "status"
-
-    // --- LÓGICA PARA PRIORIDADE: Tenta pegar da API, senão define como 'Desconhecida' ---
-    // A API C# AGORA DEVE retornar a prioridade como 'prioridade' (camelCase)
-    $prioridadeApi = isset($tarefa['prioridade']) ? $tarefa['prioridade'] : ''; // <-- AGORA camelCase "prioridade"
-
-    if (in_array($prioridadeApi, $prioridadesValidas)) {
-        $tarefa['prioridadeTexto'] = $prioridadeApi;
-    } else {
-        // Fallback se a API não retornar uma prioridade válida
-        $tarefa['prioridadeTexto'] = 'Desconhecida';
-    }
-
-    // Converte a string de data da API para um objeto DateTime
-    // Garanta que 'criadoEm' e 'concluidoEm' venham da API e estejam no formato correto (ex: ISO 8601)
-    // Use isset() e o camelCase
-    $criadoEm = isset($tarefa['criadoEm']) ? new DateTime($tarefa['criadoEm']) : new DateTime(); // <-- AGORA camelCase "criadoEm"
+    $isConcluido = isset($tarefa['status']) ? (bool)$tarefa['status'] : false; 
+    $criadoEm = isset($tarefa['criadoEm']) ? new DateTime($tarefa['criadoEm']) : new DateTime(); 
 
     // Inicializa $tempoGastoDisplay e $tempoGastoEmSegundos para cada tarefa
     $tempoGastoDisplay = 'N/A';
     $tempoGastoEmSegundos = 0;
-    $interval = null; // Inicializa $interval para garantir que sempre exista
-
+    
     if ($isConcluido) {
-        // Use isset() e o camelCase
-        if (isset($tarefa['concluidoEm']) && !empty($tarefa['concluidoEm'])) { // <-- AGORA camelCase "concluidoEm"
+        if (isset($tarefa['concluidoEm']) && !empty($tarefa['concluidoEm'])) { 
             $concluidoEm = new DateTime($tarefa['concluidoEm']);
-            $interval = $criadoEm->diff($concluidoEm); // $interval é definido aqui
+            $interval = $criadoEm->diff($concluidoEm); 
             $tempoGastoDisplay = formatTimeDifference($interval);
             $tempoGastoEmSegundos = dateIntervalToSeconds($interval);
-
-            $tempoTotalConcluidoSegundos += $tempoGastoEmSegundos;
         } else {
             $tempoGastoDisplay = 'Concluído (sem data de fim)';
         }
     } else {
         $agora = new DateTime();
-        $interval = $criadoEm->diff($agora); // $interval é definido aqui para tarefas pendentes
+        $interval = $criadoEm->diff($agora); 
         $tempoGastoDisplay = 'Pendente há ' . formatTimeDifference($interval);
-        // Para tarefas pendentes, o tempo gasto em segundos é o tempo que está pendente
         $tempoGastoEmSegundos = dateIntervalToSeconds($interval);
     }
 
@@ -184,16 +148,17 @@ foreach ($tarefas as &$tarefa) { // Use & para modificar o array original
     $tarefa['tempoGastoDisplay'] = $tempoGastoDisplay;
     $tarefa['tempoGastoEmSegundos'] = $tempoGastoEmSegundos;
 
-    // Incrementa a contagem de prioridades para o rodapé
-    if (isset($contagemPrioridades[$tarefa['prioridadeTexto']])) {
-        $contagemPrioridades[$tarefa['prioridadeTexto']]++;
+    // Lógica para Prioridade: Tenta pegar da API, senão define como 'Desconhecida'
+    $prioridadeApi = isset($tarefa['prioridade']) ? $tarefa['prioridade'] : ''; 
+    if (in_array($prioridadeApi, $prioridadesValidas)) {
+        $tarefa['prioridadeTexto'] = $prioridadeApi;
     } else {
-        $contagemPrioridades['Desconhecida']++; // Conta prioridades não reconhecidas
+        $tarefa['prioridadeTexto'] = 'Desconhecida';
     }
 }
 unset($tarefa); // Quebra a referência do último elemento
 
-// --- FUNÇÕES AUXILIARES PHP (Manter como estão, apenas revisar se algo foi alterado) ---
+// --- FUNÇÕES AUXILIARES PHP ---
 function formatTimeDifference($interval) {
     if (!$interval instanceof DateInterval) {
         return 'Data inválida';
@@ -223,6 +188,7 @@ function dateIntervalToSeconds(DateInterval $interval) {
     return $seconds;
 }
 
+// Esta função PHP agora não é mais usada para o rodapé, mas permanece para referência
 function formatSecondsToReadableTime($totalSeconds) {
     if ($totalSeconds < 60) {
         return round($totalSeconds) . ' segundos';
@@ -458,7 +424,6 @@ function formatSecondsToReadableTime($totalSeconds) {
                 <?php
                 if (!empty($tarefas)) {
                     foreach ($tarefas as $tarefa):
-                        // Use isset() para verificar se a chave existe antes de acessar
                         $id = htmlspecialchars(isset($tarefa['id']) ? $tarefa['id'] : 'N/A'); 
                         $titulo = htmlspecialchars(isset($tarefa['titulo']) ? $tarefa['titulo'] : 'N/A'); 
                         $usuario = htmlspecialchars(isset($tarefa['usuario']) ? $tarefa['usuario'] : 'N/A'); 
@@ -466,14 +431,12 @@ function formatSecondsToReadableTime($totalSeconds) {
                         $precoTarefa = isset($tarefa['preco']) ? (float)$tarefa['preco'] : 0.00; 
 
                         // Prioridade: Tenta pegar da API, senão define como 'Desconhecida'
-                        $prioridadeTexto = isset($tarefa['prioridade']) ? htmlspecialchars($tarefa['prioridade']) : 'Desconhecida';
+                        $prioridadeTexto = isset($tarefa['prioridadeTexto']) ? htmlspecialchars($tarefa['prioridadeTexto']) : 'Desconhecida';
                         $prioridadeClass = 'prioridade-' . strtolower($prioridadeTexto);
-                        // Garante que a classe CSS para 'Desconhecida' exista, se for o caso.
                         if (!in_array(strtolower($prioridadeTexto), ['alta', 'media', 'baixa'])) {
                              $prioridadeClass = 'prioridade-desconhecida';
                         }
-
-
+                        
                         $statusTexto = $isConcluido ? 'Concluído' : 'Pendente';
                         $statusClass = $isConcluido ? 'status-concluido' : 'status-pendente';
                     ?>
@@ -515,15 +478,12 @@ function formatSecondsToReadableTime($totalSeconds) {
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="4" style="text-align: right;">**Totais Visíveis:**</td>
-                    <td id="totalPrecoGeral">**R$ <?= number_format($precoTotalGeral, 2, ',', '.') ?>**</td>
+                    <td colspan="4" style="text-align: right;">Totais Visíveis:</td>
+                    <td id="totalPrecoGeral">R$ 0,00</td>
                     <td id="totalPrioridades">
-                        **Alta:** <?= $contagemPrioridades['Alta'] ?> |
-                        **Média:** <?= $contagemPrioridades['Media'] ?> |
-                        **Baixa:** <?= $contagemPrioridades['Baixa'] ?> |
-                        **Desconhecida:** <?= $contagemPrioridades['Desconhecida'] ?>
+                        Alta: 0 | Média: 0 | Baixa: 0 | Desconhecida: 0
                     </td>
-                    <td id="totalTempoConcluidoGeral">**<?= formatSecondsToReadableTime($tempoTotalConcluidoSegundos) ?>**</td>
+                    <td id="totalTempoConcluidoGeral">0 segundos</td>
                     <td></td>
                 </tr>
             </tfoot>
@@ -566,7 +526,7 @@ function formatSecondsToReadableTime($totalSeconds) {
             var currentVisibleTimeTotalConcluido = 0;
             var currentVisiblePriorities = {
                 'Alta': 0,
-                'Media': 0, // <-- Ajuste aqui
+                'Media': 0, 
                 'Baixa': 0,
                 'Desconhecida': 0
             };
@@ -609,10 +569,10 @@ function formatSecondsToReadableTime($totalSeconds) {
 
             // ATUALIZA O RODAPÉ COM OS TOTAIS DE PRIORIDADE
             document.getElementById("totalPrioridades").innerHTML =
-                `**Alta:** ${currentVisiblePriorities['Alta']} | ` +
-                `**Média:** ${currentVisiblePriorities['Media']} | ` + // <-- Ajuste aqui para exibir Média
-                `**Baixa:** ${currentVisiblePriorities['Baixa']} | ` +
-                `**Desconhecida:** ${currentVisiblePriorities['Desconhecida']}`;
+                `Alta: ${currentVisiblePriorities['Alta']} | ` +
+                `Média: ${currentVisiblePriorities['Media']} | ` + 
+                `Baixa: ${currentVisiblePriorities['Baixa']} | ` +
+                `Desconhecida: ${currentVisiblePriorities['Desconhecida']}`;
         }
 
         // Chama a função filterTable() uma vez ao carregar a página
