@@ -1,19 +1,82 @@
+
 [
+  {
+    "Id": 1,
+    "Titulo": "Planejar o dia",
+    "Usuario": "Carlos",
+    "Status": true,
+    "Preco": 0.00,
+    "Prioridade": "Alta",
+    "CriadoEm": "2025-06-09T08:00:00.0000000-03:00",
+    "ConcluidoEm": "2025-06-09T08:30:00.0000000-03:00"
+  },
+  {
+    "Id": 2,
+    "Titulo": "Fazer café da manhã",
+    "Usuario": "Ana",
+    "Status": true,
+    "Preco": 15.00,
+    "Prioridade": "Media",
+    "CriadoEm": "2025-06-09T07:45:00.0000000-03:00",
+    "ConcluidoEm": "2025-06-09T08:15:00.0000000-03:00"
+  },
+  {
+    "Id": 3,
+    "Titulo": "Verificar e-mails de trabalho",
+    "Usuario": "Pedro",
+    "Status": true,
+    "Preco": 0.00,
+    "Prioridade": "Baixa",
+    "CriadoEm": "2025-06-09T09:00:00.0000000-03:00",
+    "ConcluidoEm": "2025-06-09T09:45:00.0000000-03:00"
+  },
+  {
+    "Id": 4,
+    "Titulo": "Regar as plantas",
+    "Usuario": "Sofia",
+    "Status": false,
+    "Preco": 0.00,
+    "Prioridade": "Media",
+    "CriadoEm": "2025-06-09T10:00:00.0000000-03:00",
+    "ConcluidoEm": null
+  },
+  {
+    "Id": 5,
+    "Titulo": "Preparar almoço",
+    "Usuario": "Mariana",
+    "Status": true,
+    "Preco": 35.00,
+    "Prioridade": "Alta",
+    "CriadoEm": "2025-06-09T12:00:00.0000000-03:00",
+    "ConcluidoEm": "2025-06-09T13:00:00.0000000-03:00"
+  },
+  {
+    "Id": 6,
+    "Titulo": "Fazer ligação importante",
+    "Usuario": "João",
+    "Status": false,
+    "Preco": 0.00,
+    "Prioridade": "Alta",
+    "CriadoEm": "2025-06-09T14:00:00.0000000-03:00",
+    "ConcluidoEm": null
+  },
   {
     "Id": 7,
     "Titulo": "Lavar carro",
     "Usuario": "Leticia",
     "Status": true,
     "Preco": 25.00,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-30T08:00:15.3456789-03:00",
-    "ConcluidoEm": null
+    "ConcluidoEm": "2025-06-09T14:53:33.249478-03:00"
   },
   {
     "Id": 8,
-    "Titulo": "Fazer exerc\u00EDcios",
+    "Titulo": "Fazer exercicios",
     "Usuario": "Kelvin",
     "Status": true,
     "Preco": 10.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-28T07:20:30.4050607-03:00",
     "ConcluidoEm": null
   },
@@ -23,6 +86,7 @@
     "Usuario": "Maria",
     "Status": true,
     "Preco": 5.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-29T09:12:03-03:00",
     "ConcluidoEm": "2025-05-29T10:05:18.2345678-03:00"
   },
@@ -32,6 +96,7 @@
     "Usuario": "Gustavo",
     "Status": true,
     "Preco": 30.75,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-26T13:40:55.6789012-03:00",
     "ConcluidoEm": null
   },
@@ -41,6 +106,7 @@
     "Usuario": "Leticia",
     "Status": true,
     "Preco": 150.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-27T17:08:22.3344556-03:00",
     "ConcluidoEm": null
   },
@@ -50,6 +116,7 @@
     "Usuario": "Kelvin",
     "Status": true,
     "Preco": 75.20,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-25T15:15:15-03:00",
     "ConcluidoEm": "2025-05-25T17:00:00.1234567-03:00"
   },
@@ -59,6 +126,7 @@
     "Usuario": "Maria",
     "Status": false,
     "Preco": 12.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-30T10:25:40.7890123-03:00",
     "ConcluidoEm": null
   },
@@ -68,6 +136,7 @@
     "Usuario": "Gustavo",
     "Status": false,
     "Preco": 8.50,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-28T20:07:07.8901234-03:00",
     "ConcluidoEm": null
   },
@@ -75,8 +144,9 @@
     "Id": 15,
     "Titulo": "Comprar presente",
     "Usuario": "Leticia",
-    "Status": true,
+    "Status": false,
     "Preco": 60.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-29T14:50:00-03:00",
     "ConcluidoEm": "2025-05-29T16:10:30.9876543-03:00"
   },
@@ -86,6 +156,7 @@
     "Usuario": "Kelvin",
     "Status": false,
     "Preco": 40.00,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-27T09:30:10.1122334-03:00",
     "ConcluidoEm": null
   },
@@ -95,6 +166,7 @@
     "Usuario": "Maria",
     "Status": true,
     "Preco": 90.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-26T14:05:00.5566778-03:00",
     "ConcluidoEm": null
   },
@@ -104,15 +176,17 @@
     "Usuario": "Gustavo",
     "Status": true,
     "Preco": 20.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-25T10:00:00-03:00",
     "ConcluidoEm": "2025-05-25T11:00:00.1234567-03:00"
   },
   {
     "Id": 19,
-    "Titulo": "Assistir s\u00E9rie",
+    "Titulo": "Assistir série",
     "Usuario": "Leticia",
     "Status": true,
     "Preco": 0.00,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-31T21:30:45-03:00",
     "ConcluidoEm": null
   },
@@ -122,6 +196,7 @@
     "Usuario": "Kelvin",
     "Status": false,
     "Preco": 35.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-29T12:00:00.9988776-03:00",
     "ConcluidoEm": null
   },
@@ -131,6 +206,7 @@
     "Usuario": "Maria",
     "Status": false,
     "Preco": 45.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-28T13:13:13.1313131-03:00",
     "ConcluidoEm": null
   },
@@ -140,6 +216,7 @@
     "Usuario": "Gustavo",
     "Status": true,
     "Preco": 120.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-27T10:20:00-03:00",
     "ConcluidoEm": "2025-05-27T16:00:30.456789-03:00"
   },
@@ -149,6 +226,7 @@
     "Usuario": "Leticia",
     "Status": false,
     "Preco": 0.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-30T09:10:20.3040506-03:00",
     "ConcluidoEm": null
   },
@@ -158,15 +236,17 @@
     "Usuario": "Kelvin",
     "Status": false,
     "Preco": 0.00,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-26T08:00:00-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 25,
-    "Titulo": "Criar apresenta\u00E7\u00E3o",
+    "Titulo": "Criar apresentação",
     "Usuario": "Maria",
     "Status": false,
     "Preco": 70.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-25T16:40:10.7890123-03:00",
     "ConcluidoEm": null
   },
@@ -176,6 +256,7 @@
     "Usuario": "Gustavo",
     "Status": true,
     "Preco": 18.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-24T13:00:00-03:00",
     "ConcluidoEm": "2025-05-24T17:00:00.9988776-03:00"
   },
@@ -185,6 +266,7 @@
     "Usuario": "Leticia",
     "Status": true,
     "Preco": 0.00,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-31T15:00:00.1234567-03:00",
     "ConcluidoEm": null
   },
@@ -194,6 +276,7 @@
     "Usuario": "Kelvin",
     "Status": true,
     "Preco": 50.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-28T10:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -203,6 +286,7 @@
     "Usuario": "Maria",
     "Status": true,
     "Preco": 25.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-29T11:00:00-03:00",
     "ConcluidoEm": "2025-05-29T12:00:00.1234567-03:00"
   },
@@ -212,6 +296,7 @@
     "Usuario": "Gustavo",
     "Status": false,
     "Preco": 10.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-27T18:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -221,15 +306,17 @@
     "Usuario": "Leticia",
     "Status": false,
     "Preco": 45.00,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-30T11:30:00-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 32,
-    "Titulo": "Revisar c\u00F3digo",
+    "Titulo": "Revisar código",
     "Usuario": "Kelvin",
     "Status": true,
     "Preco": 80.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-25T19:00:00-03:00",
     "ConcluidoEm": "2025-05-25T21:00:00-03:00"
   },
@@ -239,6 +326,7 @@
     "Usuario": "Maria",
     "Status": false,
     "Preco": 110.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-26T10:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -248,6 +336,7 @@
     "Usuario": "Gustavo",
     "Status": false,
     "Preco": 60.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-28T06:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -257,6 +346,7 @@
     "Usuario": "Leticia",
     "Status": true,
     "Preco": 120.00,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-29T10:00:00-03:00",
     "ConcluidoEm": "2025-05-29T13:00:00-03:00"
   },
@@ -266,6 +356,7 @@
     "Usuario": "Kelvin",
     "Status": true,
     "Preco": 70.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-27T14:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -275,6 +366,7 @@
     "Usuario": "Maria",
     "Status": true,
     "Preco": 200.00,
+    "Prioridade": "Alta",
     "CriadoEm": "2025-05-30T14:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -284,6 +376,7 @@
     "Usuario": "Gustavo",
     "Status": true,
     "Preco": 95.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-25T09:00:00-03:00",
     "ConcluidoEm": "2025-05-25T12:00:00-03:00"
   },
@@ -293,6 +386,7 @@
     "Usuario": "Leticia",
     "Status": true,
     "Preco": 0.00,
+    "Prioridade": "Baixa",
     "CriadoEm": "2025-05-31T19:00:00-03:00",
     "ConcluidoEm": null
   },
@@ -302,7 +396,18 @@
     "Usuario": "Kelvin",
     "Status": true,
     "Preco": 30.00,
+    "Prioridade": "Media",
     "CriadoEm": "2025-05-29T18:00:00-03:00",
+    "ConcluidoEm": null
+  },
+  {
+    "Id": 41,
+    "Titulo": "eu n sei",
+    "Usuario": "AAAAAAAAAAAAAAAA",
+    "Status": false,
+    "Preco": 0.1,
+    "Prioridade": "Alta",
+    "CriadoEm": "2025-06-09T14:53:49.6597437-03:00",
     "ConcluidoEm": null
   }
 ]
