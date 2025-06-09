@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\xampp\\htdocs\\projeto-topicos\\TodoList\\TodoList.csproj": {}
+    "C:\\xampp\\htdocs\\csharp-trabalho\\TodoList.csproj": {}
   },
   "projects": {
-    "D:\\xampp\\htdocs\\projeto-topicos\\TodoList\\TodoList.csproj": {
+    "C:\\xampp\\htdocs\\csharp-trabalho\\TodoList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\xampp\\htdocs\\projeto-topicos\\TodoList\\TodoList.csproj",
+        "projectUniqueName": "C:\\xampp\\htdocs\\csharp-trabalho\\TodoList.csproj",
         "projectName": "TodoList",
-        "projectPath": "D:\\xampp\\htdocs\\projeto-topicos\\TodoList\\TodoList.csproj",
-        "packagesPath": "C:\\Users\\kelvi.KELVIN\\.nuget\\packages\\",
-        "outputPath": "D:\\xampp\\htdocs\\projeto-topicos\\TodoList\\obj\\",
+        "projectPath": "C:\\xampp\\htdocs\\csharp-trabalho\\TodoList.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\xampp\\htdocs\\csharp-trabalho\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\kelvi.KELVIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -37,8 +37,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -76,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.409/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

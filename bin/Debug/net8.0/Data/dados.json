@@ -1,53 +1,5 @@
 [
   {
-    "Id": 1,
-    "Titulo": "Comprar mantimentos",
-    "Usuario": "Maria",
-    "Status": false,
-    "CriadoEm": "2025-05-28T10:17:34.1234567-03:00",
-    "ConcluidoEm": null
-  },
-  {
-    "Id": 2,
-    "Titulo": "Revisar relatório mensal",
-    "Usuario": "Gustavo",
-    "Status": false,
-    "CriadoEm": "2025-05-27T14:45:01.9876543-03:00",
-    "ConcluidoEm": null
-  },
-  {
-    "Id": 3,
-    "Titulo": "Agendar consulta médica",
-    "Usuario": "Leticia",
-    "Status": true,
-    "CriadoEm": "2025-05-26T09:05:50.0000000-03:00",
-    "ConcluidoEm": "2025-05-26T11:30:22.5678901-03:00"
-  },
-  {
-    "Id": 4,
-    "Titulo": "Pagar contas",
-    "Usuario": "Kelvin",
-    "Status": false,
-    "CriadoEm": "2025-05-29T16:02:11.2345678-03:00",
-    "ConcluidoEm": null
-  },
-  {
-    "Id": 5,
-    "Titulo": "Preparar apresentação",
-    "Usuario": "Maria",
-    "Status": false,
-    "CriadoEm": "2025-05-25T11:59:00.1011121-03:00",
-    "ConcluidoEm": null
-  },
-  {
-    "Id": 6,
-    "Titulo": "Estudar para prova",
-    "Usuario": "Gustavo",
-    "Status": true,
-    "CriadoEm": "2025-05-24T19:33:45.0000000-03:00",
-    "ConcluidoEm": "2025-05-25T22:10:05.9988776-03:00"
-  },
-  {
     "Id": 7,
     "Titulo": "Lavar carro",
     "Usuario": "Leticia",
@@ -57,9 +9,9 @@
   },
   {
     "Id": 8,
-    "Titulo": "Fazer exercícios",
+    "Titulo": "Fazer exerc\u00EDcios",
     "Usuario": "Kelvin",
-    "Status": false,
+    "Status": true,
     "CriadoEm": "2025-05-28T07:20:30.4050607-03:00",
     "ConcluidoEm": null
   },
@@ -68,7 +20,7 @@
     "Titulo": "Responder e-mails",
     "Usuario": "Maria",
     "Status": true,
-    "CriadoEm": "2025-05-29T09:12:03.0000000-03:00",
+    "CriadoEm": "2025-05-29T09:12:03-03:00",
     "ConcluidoEm": "2025-05-29T10:05:18.2345678-03:00"
   },
   {
@@ -92,7 +44,7 @@
     "Titulo": "Consertar torneira",
     "Usuario": "Kelvin",
     "Status": true,
-    "CriadoEm": "2025-05-25T15:15:15.0000000-03:00",
+    "CriadoEm": "2025-05-25T15:15:15-03:00",
     "ConcluidoEm": "2025-05-25T17:00:00.1234567-03:00"
   },
   {
@@ -116,7 +68,7 @@
     "Titulo": "Comprar presente",
     "Usuario": "Leticia",
     "Status": true,
-    "CriadoEm": "2025-05-29T14:50:00.0000000-03:00",
+    "CriadoEm": "2025-05-29T14:50:00-03:00",
     "ConcluidoEm": "2025-05-29T16:10:30.9876543-03:00"
   },
   {
@@ -140,15 +92,15 @@
     "Titulo": "Fazer compras online",
     "Usuario": "Gustavo",
     "Status": true,
-    "CriadoEm": "2025-05-25T10:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-25T10:00:00-03:00",
     "ConcluidoEm": "2025-05-25T11:00:00.1234567-03:00"
   },
   {
     "Id": 19,
-    "Titulo": "Assistir série",
+    "Titulo": "Assistir s\u00E9rie",
     "Usuario": "Leticia",
     "Status": false,
-    "CriadoEm": "2025-05-31T21:30:45.0000000-03:00",
+    "CriadoEm": "2025-05-31T21:30:45-03:00",
     "ConcluidoEm": null
   },
   {
@@ -172,8 +124,8 @@
     "Titulo": "Ajudar com projeto",
     "Usuario": "Gustavo",
     "Status": true,
-    "CriadoEm": "2025-05-27T10:20:00.0000000-03:00",
-    "ConcluidoEm": "2025-05-27T16:00:30.4567890-03:00"
+    "CriadoEm": "2025-05-27T10:20:00-03:00",
+    "ConcluidoEm": "2025-05-27T16:00:30.456789-03:00"
   },
   {
     "Id": 23,
@@ -188,14 +140,14 @@
     "Titulo": "Caminhar com o cachorro",
     "Usuario": "Kelvin",
     "Status": false,
-    "CriadoEm": "2025-05-26T08:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-26T08:00:00-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 25,
-    "Titulo": "Criar apresentação",
+    "Titulo": "Criar apresenta\u00E7\u00E3o",
     "Usuario": "Maria",
-    "Status": false,
+    "Status": true,
     "CriadoEm": "2025-05-25T16:40:10.7890123-03:00",
     "ConcluidoEm": null
   },
@@ -204,14 +156,14 @@
     "Titulo": "Pesquisar tema",
     "Usuario": "Gustavo",
     "Status": true,
-    "CriadoEm": "2025-05-24T13:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-24T13:00:00-03:00",
     "ConcluidoEm": "2025-05-24T17:00:00.9988776-03:00"
   },
   {
     "Id": 27,
     "Titulo": "Visitar amigos",
     "Usuario": "Leticia",
-    "Status": false,
+    "Status": true,
     "CriadoEm": "2025-05-31T15:00:00.1234567-03:00",
     "ConcluidoEm": null
   },
@@ -219,8 +171,8 @@
     "Id": 28,
     "Titulo": "Atualizar software",
     "Usuario": "Kelvin",
-    "Status": false,
-    "CriadoEm": "2025-05-28T10:00:00.0000000-03:00",
+    "Status": true,
+    "CriadoEm": "2025-05-28T10:00:00-03:00",
     "ConcluidoEm": null
   },
   {
@@ -228,7 +180,7 @@
     "Titulo": "Reunir com equipe",
     "Usuario": "Maria",
     "Status": true,
-    "CriadoEm": "2025-05-29T11:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-29T11:00:00-03:00",
     "ConcluidoEm": "2025-05-29T12:00:00.1234567-03:00"
   },
   {
@@ -236,7 +188,7 @@
     "Titulo": "Fazer backup",
     "Usuario": "Gustavo",
     "Status": false,
-    "CriadoEm": "2025-05-27T18:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-27T18:00:00-03:00",
     "ConcluidoEm": null
   },
   {
@@ -244,23 +196,23 @@
     "Titulo": "Comprar flores",
     "Usuario": "Leticia",
     "Status": false,
-    "CriadoEm": "2025-05-30T11:30:00.0000000-03:00",
+    "CriadoEm": "2025-05-30T11:30:00-03:00",
     "ConcluidoEm": null
   },
   {
     "Id": 32,
-    "Titulo": "Revisar código",
+    "Titulo": "Revisar c\u00F3digo",
     "Usuario": "Kelvin",
     "Status": true,
-    "CriadoEm": "2025-05-25T19:00:00.0000000-03:00",
-    "ConcluidoEm": "2025-05-25T21:00:00.0000000-03:00"
+    "CriadoEm": "2025-05-25T19:00:00-03:00",
+    "ConcluidoEm": "2025-05-25T21:00:00-03:00"
   },
   {
     "Id": 33,
     "Titulo": "Enviar proposta",
     "Usuario": "Maria",
     "Status": false,
-    "CriadoEm": "2025-05-26T10:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-26T10:00:00-03:00",
     "ConcluidoEm": null
   },
   {
@@ -268,7 +220,7 @@
     "Titulo": "Academia",
     "Usuario": "Gustavo",
     "Status": false,
-    "CriadoEm": "2025-05-28T06:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-28T06:00:00-03:00",
     "ConcluidoEm": null
   },
   {
@@ -276,15 +228,15 @@
     "Titulo": "Pintar quadro",
     "Usuario": "Leticia",
     "Status": true,
-    "CriadoEm": "2025-05-29T10:00:00.0000000-03:00",
-    "ConcluidoEm": "2025-05-29T13:00:00.0000000-03:00"
+    "CriadoEm": "2025-05-29T10:00:00-03:00",
+    "ConcluidoEm": "2025-05-29T13:00:00-03:00"
   },
   {
     "Id": 36,
     "Titulo": "Arrumar jardim",
     "Usuario": "Kelvin",
     "Status": false,
-    "CriadoEm": "2025-05-27T14:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-27T14:00:00-03:00",
     "ConcluidoEm": null
   },
   {
@@ -292,7 +244,7 @@
     "Titulo": "Fazer curso online",
     "Usuario": "Maria",
     "Status": false,
-    "CriadoEm": "2025-05-30T14:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-30T14:00:00-03:00",
     "ConcluidoEm": null
   },
   {
@@ -300,15 +252,15 @@
     "Titulo": "Reparar computador",
     "Usuario": "Gustavo",
     "Status": true,
-    "CriadoEm": "2025-05-25T09:00:00.0000000-03:00",
-    "ConcluidoEm": "2025-05-25T12:00:00.0000000-03:00"
+    "CriadoEm": "2025-05-25T09:00:00-03:00",
+    "ConcluidoEm": "2025-05-25T12:00:00-03:00"
   },
   {
     "Id": 39,
     "Titulo": "Assistir filme",
     "Usuario": "Leticia",
     "Status": false,
-    "CriadoEm": "2025-05-31T19:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-31T19:00:00-03:00",
     "ConcluidoEm": null
   },
   {
@@ -316,12 +268,7 @@
     "Titulo": "Cozinhar jantar",
     "Usuario": "Kelvin",
     "Status": false,
-    "CriadoEm": "2025-05-29T18:00:00.0000000-03:00",
+    "CriadoEm": "2025-05-29T18:00:00-03:00",
     "ConcluidoEm": null
   }
 ]
-
-
-
-
-

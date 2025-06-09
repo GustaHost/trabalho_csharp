@@ -1,13 +1,5 @@
 [
   {
-    "Id": 6,
-    "Titulo": "Estudar para prova",
-    "Usuario": "Gustavo",
-    "Status": true,
-    "CriadoEm": "2025-05-24T19:33:45-03:00",
-    "ConcluidoEm": "2025-05-25T22:10:05.9988776-03:00"
-  },
-  {
     "Id": 7,
     "Titulo": "Lavar carro",
     "Usuario": "Leticia",
@@ -19,7 +11,7 @@
     "Id": 8,
     "Titulo": "Fazer exerc\u00EDcios",
     "Usuario": "Kelvin",
-    "Status": false,
+    "Status": true,
     "CriadoEm": "2025-05-28T07:20:30.4050607-03:00",
     "ConcluidoEm": null
   },
@@ -43,7 +35,7 @@
     "Id": 11,
     "Titulo": "Planejar viagem",
     "Usuario": "Leticia",
-    "Status": false,
+    "Status": true,
     "CriadoEm": "2025-05-27T17:08:22.3344556-03:00",
     "ConcluidoEm": null
   },
@@ -155,7 +147,7 @@
     "Id": 25,
     "Titulo": "Criar apresenta\u00E7\u00E3o",
     "Usuario": "Maria",
-    "Status": false,
+    "Status": true,
     "CriadoEm": "2025-05-25T16:40:10.7890123-03:00",
     "ConcluidoEm": null
   },
@@ -171,7 +163,7 @@
     "Id": 27,
     "Titulo": "Visitar amigos",
     "Usuario": "Leticia",
-    "Status": false,
+    "Status": true,
     "CriadoEm": "2025-05-31T15:00:00.1234567-03:00",
     "ConcluidoEm": null
   },
@@ -179,7 +171,7 @@
     "Id": 28,
     "Titulo": "Atualizar software",
     "Usuario": "Kelvin",
-    "Status": false,
+    "Status": true,
     "CriadoEm": "2025-05-28T10:00:00-03:00",
     "ConcluidoEm": null
   },

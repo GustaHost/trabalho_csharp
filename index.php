@@ -1,11 +1,23 @@
 <?php
 
 $tipoUsuario = 'admin';
-$nomeUsuario = 'joao';
+$nomeUsuario = 'joao'; // Defina o usuário logado de forma mais robusta em uma aplicação real
 
-$response = file_get_contents("http://localhost:5093/api/tarefas/admin/joao");
+// --- PARTE CRÍTICA: COMO VOCÊ ESTÁ BUSCANDO AS TAREFAS INICIALMENTE ---
+// Manter esta linha como está, pois corresponde ao seu [HttpGet] na API C#
+$response = file_get_contents("http://localhost:5093/api/tarefas/$tipoUsuario/$nomeUsuario");
+
 $tarefas = json_decode($response, true);
 
+// Adicione aqui uma verificação básica se $tarefas foi decodificado corretamente
+if (!is_array($tarefas)) {
+    $tarefas = []; // Garante que $tarefas é um array para o loop foreach
+    // Você pode querer exibir uma mensagem de erro mais proeminente aqui
+    // echo "<div class='alert alert-danger'>Erro ao carregar tarefas iniciais.</div>";
+}
+
+
+// --- LÓGICA DE EXCLUSÃO (Está correta) ---
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['excluir'])) {
     $id = $_POST['id_apagar'];
     $tipoUsuario = $_POST['tipoUsuario'];
@@ -21,14 +33,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['excluir'])) {
     ];
 
     $context = stream_context_create($options);
-    $result = file_get_contents($url, false, $context);
+    $result = @file_get_contents($url, false, $context); // Usar @ para suprimir warnings e tratar com if ($result === false)
 
-    echo "<div class='alert alert-success'>Tarefa $id excluída com sucesso!</div>";
+    if ($result === false) {
+        $error = error_get_last();
+        echo "<div class='alert alert-danger'>Erro ao excluir tarefa: " . ($error ? $error['message'] : 'Erro desconhecido') . "</div>";
+    } else {
+        echo "<div class='alert alert-success'>Tarefa $id excluída com sucesso!</div>";
+    }
 
-    // Opcional: recarrega a página após exclusão
-    header("Refresh:1");
+    header("Refresh:0"); // Recarrega a página IMEDIATAMENTE após a exclusão
     exit;
 }
+
+
+// --- LÓGICA DE MUDAR STATUS (Foco Principal da Correção) ---
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mudar_status'])) {
     $id = $_POST['id_atualizar'];
     $tipoUsuario = $_POST['tipoUsuario'];
@@ -40,22 +59,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mudar_status'])) {
         'http' => [
             'method' => 'PUT',
             'header' => "Content-Type: application/json",
-            'content' => '' // necessário mesmo vazio
+            'content' => '' // Necessário mesmo vazio para PUT
         ]
     ];
 
     $context = stream_context_create($options);
-    $response = file_get_contents($url, false, $context);
+    $response_api = @file_get_contents($url, false, $context); // Usar @ para suprimir warnings
 
-    if ($response === false) {
-        echo "<div class='alert alert-danger'>Erro ao atualizar status.</div>";
+    if ($response_api === false) {
+        $error = error_get_last();
+        echo "<div class='alert alert-danger'>Erro ao atualizar status: " . ($error ? $error['message'] : 'Erro desconhecido') . "</div>";
     } else {
+        // Se a API retornar sucesso, a mensagem de sucesso será exibida.
         echo "<div class='alert alert-success'>Status atualizado com sucesso.</div>";
-        header("Refresh:1");
-        exit;
+        // Redireciona para a própria página para forçar a recarga dos dados atualizados
+        header("Location: " . $_SERVER['PHP_SELF']);
+        exit; // Impede que o restante do script seja executado após o redirecionamento
     }
 }
-
 
 ?>
 
@@ -117,6 +138,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mudar_status'])) {
             color: white;
         }
 
+        /* Estilos para o status */
         .status-pendente {
             color: #ffc107;
             font-weight: bold;
@@ -153,8 +175,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mudar_status'])) {
         <h1>ToDo List</h1>
 
         <div class="search-bar">
-            <label for="search">Pesquisar Título:</label>
-            <input type="text" id="search" placeholder="Digite um título...">
+            <label for="searchId">Pesquisar por ID:</label>
+            <input type="text" id="searchId" placeholder="Digite o ID..." onkeyup="filterTable()">
         </div>
 
         <table>
@@ -167,13 +189,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mudar_status'])) {
                     <th>Ações</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="taskTableBody">
                 <?php foreach ($tarefas as $tarefa): ?>
                     <?php
                     $id = htmlspecialchars($tarefa['id']);
                     $titulo = htmlspecialchars($tarefa['titulo']);
                     $usuario = htmlspecialchars($tarefa['usuario']);
-                    $status = strtolower($tarefa['status']);
+
+                    $isConcluido = (bool)$tarefa['status']; // Converte explicitamente para booleano
+
+                    $statusTexto = $isConcluido ? 'Concluído' : 'Pendente';
+                    $statusClass = $isConcluido ? 'status-concluido' : 'status-pendente';
                     ?>
                     <tr>
                         <td><?= $id ?></td>
@@ -184,8 +210,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mudar_status'])) {
                                 <input type="hidden" name="id_atualizar" value="<?= $id ?>">
                                 <input type="hidden" name="tipoUsuario" value="admin">
                                 <input type="hidden" name="nomeUsuario" value="<?= $usuario ?>">
-                                <button type="submit" name="mudar_status" class="btn btn-sm <?= $status === 'concluido' ? 'btn-success' : 'btn-warning' ?>">
-                                    <?= $status === 'concluido' ? 'Concluído' : 'Pendente' ?>
+                                <button type="submit" name="mudar_status" class="btn btn-sm <?= $isConcluido ? 'btn-success' : 'btn-warning' ?> <?= $statusClass ?>">
+                                    <?= $statusTexto ?>
                                 </button>
                             </form>
                         </td>
@@ -202,6 +228,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['mudar_status'])) {
             </tbody>
         </table>
     </div>
+
+    <script>
+        function filterTable() {
+            // Pega o valor digitado no campo de pesquisa
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchId");
+            filter = input.value.toUpperCase(); // Converte para maiúsculas para comparação (útil se o ID for alfanumérico)
+            table = document.getElementById("taskTableBody"); // Pega o corpo da tabela
+            tr = table.getElementsByTagName("tr"); // Pega todas as linhas da tabela
+
+            // Percorre todas as linhas da tabela
+            for (i = 0; i < tr.length; i++) {
+                // A primeira célula (índice 0) contém o ID
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText; // Pega o texto do ID na célula
+                    // Se o ID da linha começar com o que foi digitado, exibe a linha
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = ""; // Exibe a linha
+                    } else {
+                        tr[i].style.display = "none"; // Esconde a linha
+                    }
+                }
+            }
+        }
+    </script>
 
 </body>
 
